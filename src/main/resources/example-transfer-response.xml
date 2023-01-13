@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ns2:TransferResponse xmlns:ns2="http://www.example.com/exercises/transfersystem/transfer-request-response.xsd">
+  <RequestId>929a1378-1487-49c8-8237-a8e7ec152cbb</RequestId>
+  <TargetAccountNumber>000142006678</TargetAccountNumber>
+  <Action>CREDIT</Action>
+  <Currency>SEK</Currency>
+  <Quantity>50.00</Quantity>
+  <Outcome>ACCEPT</Outcome>
+</ns2:TransferResponse>
+

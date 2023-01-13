@@ -1,0 +1,6 @@
+<bindings version="2.0" xmlns="http://java.sun.com/xml/ns/jaxb" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <bindings schemaLocation="transfer-request-response.xsd">
+        <bindings node="//xs:complexType[@name='TransferTypeRequest']">
+        </bindings>
+    </bindings>
+</bindings>
