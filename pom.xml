@@ -61,34 +61,42 @@
             <artifactId>jsonschema2pojo-core</artifactId>
             <version>1.1.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.jvnet.jaxb2_commons</groupId>
+            <artifactId>jaxb2-basics-annotate</artifactId>
+            <version>1.1.0</version>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-<!--            TODO @XmlRootElement don't generate after build -->
-<!--            <plugin>-->
-<!--                <groupId>org.codehaus.mojo</groupId>-->
-<!--                <artifactId>jaxb2-maven-plugin</artifactId>-->
-<!--                <version>2.5.0</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>xjc</id>-->
-<!--                        <goals>-->
-<!--                            <goal>xjc</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <xjbSources>-->
-<!--                        <xjbSource>src/main/java/com/transfersystem/config/transfer-request-response.xjb</xjbSource>-->
-<!--                    </xjbSources>-->
-<!--                    <sources>-->
-<!--                        <source>${basedir}/src/main/resources/transfer-request-response.xsd</source>-->
-<!--                    </sources>-->
-<!--                    <outputDirectory>${basedir}/src/main/java</outputDirectory>-->
-<!--                    <clearOutputDir>false</clearOutputDir>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <version>2.5.0</version>
+                <executions>
+                    <execution>
+                        <id>xjc</id>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <generateEpisode>
+                        false
+                    </generateEpisode>
+                    <arguments>
+                        <argument>-Xannotate</argument>
+                    </arguments>
+                    <extension>true</extension>
+                    <sources>
+                        <source>${basedir}/src/main/resources/transfer-request-response.xsd</source>
+                    </sources>
+                    <outputDirectory>${basedir}/src/main/java</outputDirectory>
+                    <clearOutputDir>false</clearOutputDir>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>

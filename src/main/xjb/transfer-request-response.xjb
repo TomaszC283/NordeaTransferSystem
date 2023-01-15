@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:annox="http://annox.dev.java.net"
+               xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               jaxb:version="2.1"
+               jaxb:extensionBindingPrefixes="xjc annox">
+
+    <jaxb:bindings schemaLocation="../resources/transfer-request-response.xsd"
+                   node="//xs:complexType[@name='TransferRequestType']">
+        <annox:annotate>
+            <annox:annotate annox:class="javax.xml.bind.annotation.XmlRootElement" name="TransferRequest"/>
+        </annox:annotate>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="../resources/transfer-request-response.xsd"
+                   node="//xs:complexType[@name='TransferResponseType']">
+        <annox:annotate>
+            <annox:annotate annox:class="javax.xml.bind.annotation.XmlRootElement" name="TransferResponse"/>
+        </annox:annotate>
+    </jaxb:bindings>
+</jaxb:bindings>
